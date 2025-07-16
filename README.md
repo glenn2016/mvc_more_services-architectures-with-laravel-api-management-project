@@ -21,3 +21,32 @@ The goal is to provide a solid foundation for a collaborative project tracking t
 - MySQL 
 - Composer
 - jwt for API auth
+
+
+
+## ⚙️ Installation
+
+```bash
+# 1. Clone the repository
+https://github.com/glenn2016/clean-architectures-with-laravel-api-management-project.git
+
+# 2. Move into the project directory
+cd api_managaement_poject
+
+# 3. Install PHP dependencies via Composer
+composer install
+
+# 4. Copy and configure the environment file
+cp .env.example .env
+
+# 5. Generate the application key
+php artisan key:generate
+php artisan jwt:secret
+
+# 6. Set your database credentials in the .env file
+
+# 7. Run migrations 
+php artisan migrate
+
+# 8. Start the local development server
+php artisan serve
