@@ -20,7 +20,8 @@ return new class extends Migration
             $table->unsignedBigInteger('assigned_to'); // l'utilisateur (membre)
             $table->foreign('assigned_to')->references('id')->on('users')->onDelete('cascade');
 
-
+            $table->unsignedBigInteger('created_by')->nullable(); // souvent le chef
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('set null');
 
             $table->timestamps();
         });
