@@ -38,6 +38,22 @@ class AuthController extends Controller
         ]);
     }
 
+    /**
+     * @group Authentification
+     * Connexion d’un utilisateur
+     *
+     * Ce endpoint permet à un utilisateur de se connecter et de recevoir un token JWT.
+     *
+     * @bodyParam email string required L’email de l’utilisateur. Example: john@example.com
+     * @bodyParam password string required Le mot de passe. Example: secret123
+     *
+     * @response 200 {
+     *  "access_token": "eyJ0eXAiOiJKV1QiLCJh...",
+     *  "token_type": "bearer",
+     *  "expires_in": 3600
+     * }
+     */
+
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');

@@ -41,6 +41,7 @@ class MakeServiceCommand extends Command
         }
 
         $content = <<<PHP
+
         <?php
 
         namespace App\Services;
