@@ -18,6 +18,20 @@ class AuthController extends Controller
         $this->authService = $authService;
     }
 
+        /**
+     * @group Authentification
+     * Creation d’un utilisateur
+     *
+     * Ce endpoint permet à un utilisateur de crer son compte
+     *
+     *
+     * @response 200 {
+     *  "access_token": "eyJ0eXAiOiJKV1QiLCJh...",
+     *  "token_type": "bearer",
+     *  "expires_in": 3600
+     * }
+     */
+
     public function register(Request $request)
     {
         $validator = Validator::make($request->all(), [
